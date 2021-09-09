@@ -49,7 +49,7 @@ class ComicController extends Controller
     public function show(Comic $comic) //?Dependency injection
     {
         // $comic = Comic::find($id); //? non serve, servirebbe se non ci fosse la Dependency injection
-        dd($comic);
+        // dd($comic);
         return view('comics.show',compact('comic'));
     }
 
