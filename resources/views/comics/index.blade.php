@@ -19,7 +19,7 @@
         <td>{{ $fumetto->title }}</td>
         <td>{{ $fumetto->price }}</td>
         <td>
-          <a href="" class="btn btn-success">Show</a>
+          <a href="{{ route('comics.show', ['comic' => $fumetto->id])}}" class="btn btn-success">Show</a>
           <a href="" class="btn btn-secondary">Edit</a>
           <a href="" class="btn btn-warning">Delete</a>
         </td>
