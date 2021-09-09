@@ -12,16 +12,19 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>
-        <a href="" class="btn btn-primary">Show</a>
-        <a href="" class="btn btn-primary">Edit</a>
-        <a href="" class="btn btn-primary">Delete</a>
-      </td>
-    </tr>
+
+    @foreach ($fumetti as $fumetto)
+      <tr>
+        <th scope="row">{{ $fumetto->id }}</th>
+        <td>{{ $fumetto->title }}</td>
+        <td>{{ $fumetto->price }}</td>
+        <td>
+          <a href="" class="btn btn-primary">Show</a>
+          <a href="" class="btn btn-primary">Edit</a>
+          <a href="" class="btn btn-primary">Delete</a>
+        </td>
+      </tr>
+    @endforeach
 
   </tbody>
 </table>
