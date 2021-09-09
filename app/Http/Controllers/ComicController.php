@@ -14,7 +14,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $fumetti = Comic::all();
+        $fumetti = Comic::paginate(4);
         // dd($fumetti);
         return view('comics.index', compact('fumetti'));
     }
