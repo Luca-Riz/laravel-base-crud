@@ -42,7 +42,7 @@ class ComicController extends Controller
 
         $newComic = new Comic;
         
-        //? primo metodo per salvare i dati
+        //? A - primo metodo per salvare i dati
         // $newComic->title = $data['title'];
         // $newComic->description = $data['description'];
         // $newComic->thumb = $data['thumb'];
@@ -51,7 +51,7 @@ class ComicController extends Controller
         // $newComic->sale_date = $data['sale_date'];
         // $newComic->type = $data['type'];
 
-        //? secondo metodo per salvare i dati
+        //? B - secondo metodo per salvare i dati
         $newComic->fill($data); //! obbligatorio inserire i dati fillable nel model
 
         $newComic->save();
