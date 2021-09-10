@@ -50,7 +50,11 @@ class ComicController extends Controller
     {
         // $comic = Comic::find($id); //? non serve, servirebbe se non ci fosse la Dependency injection
         // dd($comic);
-        return view('comics.show',compact('comic'));
+        if($comic){
+            return view('comics.show',compact('comic'));
+        }
+
+        abort('404');
     }
 
     /**
