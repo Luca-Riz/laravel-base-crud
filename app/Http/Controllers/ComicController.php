@@ -40,8 +40,9 @@ class ComicController extends Controller
         // dd($request->all());
         $data = $request->all();
 
+        $newComic = new Comic;
+        
         //? primo metodo per salvare i dati
-        // $newComic = new Comic;
         // $newComic->title = $data['title'];
         // $newComic->description = $data['description'];
         // $newComic->thumb = $data['thumb'];
