@@ -14,7 +14,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $fumetti = Comic::paginate(4);
+        $fumetti = Comic::paginate(8);
         // dd($fumetti);
         return view('comics.index', compact('fumetti'));
     }
@@ -97,9 +97,13 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        // dd($request->all());
+        $data = $request->all();
+
+        $comic->update($data);
+        return redirect()->route('comics.index');
     }
 
     /**

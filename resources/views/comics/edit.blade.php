@@ -7,8 +7,9 @@
   <div class="container mt-3">
     <h2>Modifica fumetto</h2>
     {{-- @dd($comic) --}}
-    <form>
-      @csrf 
+    <form action="{{ route('comics.update', $comic->id)}}" method='post'>
+      @csrf
+      @method('PUT') 
       {{-- title --}}
       <div class="mb-3">
         <label for="titl" class="form-label">Titolo</label>
