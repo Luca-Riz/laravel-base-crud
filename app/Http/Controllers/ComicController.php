@@ -26,7 +26,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -54,7 +54,7 @@ class ComicController extends Controller
             return view('comics.show',compact('comic'));
         }
 
-        abort('404');
+        abort('404'); //? l'abort viene eseguito in ogni caso, anche se dovesse mancare questa riga di codice
     }
 
     /**
