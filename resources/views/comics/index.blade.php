@@ -20,7 +20,7 @@
         <td>{{ $fumetto->price }}</td>
         <td>
           <a href="{{ route('comics.show', ['comic' => $fumetto->id])}}" class="btn btn-success">Show</a>
-          <a href="" class="btn btn-secondary">Edit</a>
+          <a href="{{ route('comics.edit', ['comic' => $fumetto->id])}}" class="btn btn-secondary">Edit</a>
           <a href="" class="btn btn-warning">Delete</a>
         </td>
       </tr>
@@ -29,9 +29,9 @@
   </tbody>
 </table>
 
-{{-- <div>
+<div>
   {{ $fumetti->links() }}
-</div> --}}
+</div>
 
 
 @endsection
