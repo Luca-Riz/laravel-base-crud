@@ -29,9 +29,9 @@
   </tbody>
 </table>
 
-<div>
+{{-- <div>
   {{ $fumetti->links() }}
-</div>
+</div> --}}
 
 
 @endsection
