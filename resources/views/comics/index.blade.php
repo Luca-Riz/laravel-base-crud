@@ -9,6 +9,11 @@
           {{session('modifica')}}
         </div>  
       @endif
+      @if (session('deleted'))
+        <div class="alert alert-danger">
+          {{session('deleted')}}
+        </div>  
+      @endif
     </p>
 
     <table class="table">
@@ -30,7 +35,11 @@
             <td>
               <a href="{{ route('comics.show', ['comic' => $fumetto->id])}}" class="btn btn-success">Show</a>
               <a href="{{ route('comics.edit', ['comic' => $fumetto->id])}}" class="btn btn-secondary">Edit</a>
-              <a href="" class="btn btn-warning">Delete</a>
+              <form action="{{ route('comics.destroy', $fumetto->id)}}" method="post" class="d-inline-block">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="delete" class="btn btn-danger">
+              </form>
             </td>
           </tr>
         @endforeach
